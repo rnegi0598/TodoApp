@@ -1,0 +1,37 @@
+main{
+    margin:20px 20px 10px 20px;
+    width: 70%;
+    position: absolute;
+    left:20%;
+   
+}
+/* main title welcome  */
+.main-title h1, .main-title h1 input{
+    font-size: 2rem;
+    font-weight: 900; 
+}
+.main-title h1 input{
+    
+    width:400px;
+    font-style: italic;
+}
+
+.main-title .quote{
+    color: grey;
+    font-size: 0.9rem;
+    font-style: italic;
+    
+}
+/* reformat input text field  */
+input[type="text" ]:not(.task-name){
+    appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+}
+input[type="date"],select,option{
+    background: none;
+    margin-right: 10px;
+}
+

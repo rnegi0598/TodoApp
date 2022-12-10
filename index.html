@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoPlus</title>
+    <link rel="stylesheet" href="./styles/sidebar-style.css">
+    <link rel="stylesheet" href="./styles/main-style.css">
+    <link rel="stylesheet" href="./styles/task-add-style.css">
+    <link rel="stylesheet" href="./styles/task-show-style.css">
+    <script src="./scripts/app.js" defer></script>
+    <script src="./scripts/sidebar.js" defer></script>
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- sidebar starts -->
+        <aside class="sidebar">
+            <div class="app-logo">
+                <span class="logo-icon">
+                    <img src="./images/yello-ligtblub.svg" alt="app-icon">
+                </span>
+                <span class="waviy">
+                    <span style="--i:1">T</span>
+                    <span style="--i:2">o</span>
+                    <span style="--i:3">D</span>
+                    <span style="--i:4">o</span>
+                                    
+                </span>
+            </div>
+            <div class=" sidebar-block-1">
+                <label >
+                    <input class="Today" type="radio" name="tab" class="tab">
+                    <div class="task-tag ">
+                        <span>
+                            <img src="./images/day-red.svg" alt="">
+                        </span>
+                        <span class="tag-name">
+                            Today
+                        </span>
+                    </div>
+                </label>
+
+                <label>
+                    <input class="Tomorrow" type="radio" name="tab" class="tab">
+                    <div class=" task-tag ">
+                        <span>
+                            <img src="./images/day-blue.svg" alt="">
+                        </span>
+                        <span class="tag-name">
+                            Tomorrow
+                        </span>
+                    </div>
+                </label>
+
+                <label>
+                    <input class="All" type="radio" name="tab" class="tab">
+                    <div class=" task-tag tab-select ">
+                        <span>
+                            <img src="./images/day-yellow.svg" alt="">
+                        </span>
+                        <span class="tag-name ">
+                            All Tasks
+                        </span>
+                    </div>
+                </label>
+            </div>
+            <hr>
+            <div class="sidebar-block-2">
+                <label >
+                    <input class="Personal" type="radio" name="tab" class="tab">
+                    <div class=" task-tag ">
+                        <span>
+                            <img src="./images/color-personal.svg" alt="">
+                        </span>
+                        <span class="tag-name">
+                            Personal
+                        </span>
+                    </div>
+                </label>
+
+                <label>
+                    <input class="Work" type="radio" name="tab" class="tab">
+                    <div class=" task-tag ">
+                        <span>
+                            <img src="./images/color-work.svg" alt="">
+                        </span>
+                        <span class="tag-name">
+                            Work
+                        </span>
+                    </div>
+                </label>
+                
+                <label >
+                    <input class="Health" type="radio" name="tab" class="tab">
+                    <div class="task-tag ">
+                        <span>
+                            <img src="./images/color-hospital.svg" alt="">
+                        </span>
+                        <span class="tag-name">
+                            Health
+                        </span>
+                    </div>
+                </label>
+
+                <label>
+                    <input class="Food" type="radio" name="tab" class="tab">
+                    <div class="task-tag ">
+                        <span>
+                            <img src="./images/color-food.svg" alt="">
+                        </span>
+                        <span class="tag-name">
+                            Food
+                        </span>
+                    </div>
+                </label>
+            </div>
+            
+            <hr>
+            <!-- Count total tasks  -->
+            <div class="taskcount">
+                
+            </div>
+
+        </aside>
+        <!-- sidebar ends -->
+        <!-- main  -->
+        <main>
+            <!-- welcome part starts -->
+            <div class="main-title">
+                <h1>Welcome Back, <span><input class="user-name" type="text" placeholder="Name here..." ></span></h1>
+                <div class="quote">Our todo app is here to help you achieve your goals and stay on top of all of your tasks and to-do items.<br>
+                Let's get started!"</div>
+            </div>
+            <!-- welcome part ends -->
+            <!-- todo task add starts -->
+            <div class="todo-add">
+                <div class="input-div">
+                    <label for="task-name">Enter Task </label>
+                    <input id="task-name" class="task-name" type="text" placeholder=" e.g buy milk from store ...">
+                    <br>
+                    <br>
+                    <label for="task-date">Due Date </label>
+                    <input id="task-date" class="task-date" type="date">
+                    <label for="task-categories">Category </label>
+                    <select name="task-category" class="task-category" id="task-category">
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                        <option value="Health">Health</option>
+                        <option value="Food">Food</option>
+                    </select>
+                </div>
+                <div class="submit-div">
+                    <button class="add-task-btn" type="submit">
+                        <img src="./images/color-btn.svg" alt="">
+                        <span>Add Todo</span>
+                    </button>
+                </div>
+            </div>
+            <!-- todo task add ends -->
+            <!-- displays tasks  -->
+            <div class="show-todo">
+                <!-- dummy code starts -->
+                <div class="show-task-item">
+                    <label>
+                        <div  class="task-mark">
+                            <input id="${element.createdAt}" type="checkbox">
+                             <img src="./images/circle.svg" alt="">
+                        </div>
+                    </label>
+                    <div class="show-task-data">
+                        <div class="task-content">
+                            <input type="text" value="${element.content}" readonly>    
+                        </div>
+                        <div>
+                            <span class="show-task-date">${element.dueDate}</span>
+                            <span class="show-task-category">${element.category}</span>
+                        </div>
+                    </div>
+        
+                    <div class="show-task-control">
+                        <span class="edit-task">
+                            <button type="submit">Edit</button>
+                        </span>
+                        <span class="delete-task">
+                            <button type="submit">Delete</button>
+                        </span>
+                    </div>
+                </div>
+                 <!-- dummy code ends -->
+
+            </div>
+            <!-- display task ends -->
+
+        </main>
+        <!-- main ends -->
+    </div>   
+     
+</body>
+</html>

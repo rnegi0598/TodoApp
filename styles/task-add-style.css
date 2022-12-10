@@ -1,0 +1,88 @@
+.todo-add{
+    border: 1px solid var(--add-bg-border);
+    background-color: var(--add-bg);
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    height: 150px;
+}
+.task-name{
+    outline: none;
+    border:1px solid var(--add-bg);
+    border-bottom: 1px solid black;
+    background: none;
+    padding: 5px;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+/* task input div */
+.input-div{
+    width:70%;
+    padding-left: 10px;
+}
+.input-div label{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+input[type="date"]{
+    font-size: 1rem;
+    padding: 5px;
+}
+select{
+    font-size: 1rem;
+    padding: 5px;
+}
+/* submit task button */
+.submit-div{
+    
+    width: 30%;
+    text-align: center;
+}
+.submit-div button{
+    background-color: var(--btn);
+    color: var(--text-l);
+    border-radius: 10px;
+    height:50px;
+    padding: 5px;
+    text-align: left;
+    
+}
+.submit-div button img{
+    width: 30px;
+    height:30px;
+   
+}
+.submit-div button span{
+    position: relative;
+    bottom: 8px;
+    margin-left:5px;
+    font-size: 1rem;    
+}
+
+/* media query for task add box*/
+@media all and (max-width:750px){
+    .todo-add{
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        font-size: 1rem;
+    }
+    .task-name{
+        width: 100%; 
+        margin-bottom: -30px;   
+    }
+    .input-div{
+        width: 90%;
+
+    }
+    .input-div input{
+        display: block;
+        
+    }
+    .submit-div{
+        width: 60%;
+    }
+    
+}
