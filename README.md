@@ -10,3 +10,8 @@ A simple Todo app built with html,css and javascript(Vanilla JS) to manage your 
   * Total task on sidebar tells the totall task present .
   
  
+
+
+![todo-vid2](https://user-images.githubusercontent.com/45715802/206895293-8ec0a048-4247-4f9e-b2ce-a353a206b28e.gif)
+
+
