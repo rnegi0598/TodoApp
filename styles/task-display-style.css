@@ -1,0 +1,114 @@
+.show-todo{
+    
+    background-color:var(--add-bg) ;
+    border: 1px solid var(--add-bg-border);
+    box-shadow: 5px 5px 10px var(--add-bg) inset;
+    margin-top: 50px;
+    padding: 10px;
+}
+.show-task-item{
+    background-color: var(--task-bg);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid var(--task-border);
+    border-radius: 20px;
+    padding: 10px;
+    height: 100px;
+}
+.show-task-data{
+    width: 65%;
+}
+.show-task-control{
+
+    width: 25%;
+}
+.task-content{
+    padding-bottom: 8px;
+}
+.task-content input{
+    width: 90%;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+.show-task-date,
+.show-task-category{
+    border: 1px solid black;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-l);
+    border-radius: 30px;
+    padding: 3px 8px;
+    margin-right: 5px;
+    
+}
+.show-task-date{
+    background-color: var(--due-date);
+}
+.show-task-category{
+    background-color: var(--category);
+}
+
+.edit-task{
+    margin-right: 10px;
+}
+.edit-task button ,.delete-task button{
+    width: 90px;
+    height: 45px;
+    font-weight: 900;
+    font-size:1.5rem;
+    background-color: var(--sub-btn);
+    color: var(--text-l);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* task marker -to show if a task is done or not */
+.task-mark img{
+    width: 20px;
+    height: 20px;
+    margin-right:15px;
+    border: 2px solid black;
+    border-radius: 50%;
+
+}
+@media all and (max-width:750px){
+    
+    .edit-task button ,.delete-task button{
+        font-size: 1rem;
+        width: 60px;
+        height: 30px;
+    }
+    .show-task-data input{
+        font-size: 0.8rem;
+    }
+    .show-task-date,.show-task-category{
+        font-size: 0.5rem;
+    }
+    .task-mark img{
+        width: 13px;
+        height: 13px;
+    }
+
+}
+input[type="checkbox"]{
+    display: none;
+}
+.bg-red{
+    background-color: red !important;
+}
+
+.strike{
+    text-decoration: line-through;
+}
+.bg-low{
+    background-color: grey;
+    opacity: 0.7;
+}
+
+/* hide task  */
+.hide{
+    display: none;
+}
+
+
