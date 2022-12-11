@@ -1,31 +1,37 @@
 .todo-add{
     border: 1px solid var(--add-bg-border);
     background-color: var(--add-bg);
-    margin-top: 50px;
     display: flex;
-    align-items: center;
-    height: 150px;
+    justify-content: space-between;
+    
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+
+.input-div{
+    border: 1px solid var(--add-bg-border);
+    padding: 10px;
+}
+.row-one{
+    margin-bottom: 15px;
 }
 .task-name{
+    width: 300px;
     outline: none;
     border:1px solid var(--add-bg);
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--add-bg-border);
     background: none;
     padding: 5px;
     font-size: 1.3rem;
     font-style: italic;
 }
-
-/* task input div */
-.input-div{
-    width:70%;
-    padding-left: 10px;
+.row-two{
+    display: flex;
+    column-gap: 30px;
 }
-.input-div label{
-    font-size: 1.3rem;
-    font-weight: 500;
-}
-
 input[type="date"]{
     font-size: 1rem;
     padding: 5px;
@@ -34,55 +40,51 @@ select{
     font-size: 1rem;
     padding: 5px;
 }
-/* submit task button */
+
+/* submit button */
+
 .submit-div{
-    
-    width: 30%;
-    text-align: center;
+    border: 1px solid var(--add-bg-border);
+    width: 200px;
+    height: 70px;
+    align-self: center;
+    margin-left: 10px;
+
+
 }
 .submit-div button{
     background-color: var(--btn);
-    color: var(--text-l);
-    border-radius: 10px;
-    height:50px;
-    padding: 5px;
-    text-align: left;
-    
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 .submit-div button img{
-    width: 30px;
-    height:30px;
-   
+    width: 40px;
+    height: 40px;
 }
 .submit-div button span{
+    color: var(--text-l);
     position: relative;
-    bottom: 8px;
-    margin-left:5px;
-    font-size: 1rem;    
+    bottom: 10px;
+    font-weight: 800;
 }
 
-/* media query for task add box*/
-@media all and (max-width:750px){
+
+
+@media all and (max-width:900px){
     .todo-add{
         flex-direction: column;
-        height: auto;
-        gap: 20px;
-        font-size: 1rem;
     }
-    .task-name{
-        width: 100%; 
-        margin-bottom: -30px;   
+    .row-one{
+        overflow: hidden;
     }
-    .input-div{
-        width: 90%;
-
-    }
-    .input-div input{
-        display: block;
-        
+    .row-two{
+        flex-direction: column;
+        row-gap: 10px;
     }
     .submit-div{
-        width: 60%;
+        margin: 10px auto;
+        
     }
-    
 }
