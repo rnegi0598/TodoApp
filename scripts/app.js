@@ -12,8 +12,10 @@ userNameEl.value=userName;
 let todoList=JSON.parse(localStorage.getItem('todos'))|| [];
 
 let currentTab="All";
-//Display task stored in localstorage on load
+
+//Display task stored in localstorage on site load
 displayTask();
+
 // For setting username in welcome screen
 userNameEl.addEventListener('change',(e)=>{
     userName=e.target.value;
@@ -23,7 +25,7 @@ userNameEl.addEventListener('change',(e)=>{
     userNameEl.value=userName;
 });
 
-//For adding task on submit
+//For adding task on clicking submit button
 submitBtnEL.addEventListener('click',(e)=>{
     e.preventDefault();
     todoNew={
@@ -41,12 +43,12 @@ submitBtnEL.addEventListener('click',(e)=>{
     taskCategoryEl.value='';
     //show data after adding new task
     displayTask();
+    //update the counter which stores the total task present
     updateCount();
 
 });
 
 //Function to show the todo tasks according to the selected criteria 
-
 function displayTask(){
 
     //add the task by creating new elements 
@@ -161,6 +163,7 @@ function displayTask(){
             displayTask();
 
         });
+
         // edit event to edit and save the task
         editTask.addEventListener('click',(e)=>{
             input.removeAttribute('readonly');
@@ -184,11 +187,7 @@ function displayTask(){
             updateCount();
         });
 
-        
-        
-
 
     });
-    
 
 }

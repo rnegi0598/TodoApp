@@ -1,3 +1,5 @@
+/* todo add task style start*/
+
 .todo-add{
     border: 1px solid var(--add-bg-border);
     background-color: var(--add-bg);
@@ -10,6 +12,7 @@
     margin-top: 20px;
 }
 
+/* input field style start */
 
 .input-div{
     border: 1px solid var(--add-bg-border);
@@ -40,8 +43,9 @@ select{
     font-size: 1rem;
     padding: 5px;
 }
+/* input field style end */
 
-/* submit button */
+/* submit button style start */
 
 .submit-div{
     border: 1px solid var(--add-bg-border);
@@ -70,6 +74,7 @@ select{
     font-weight: 800;
 }
 
+/* submit button style end */
 
 
 @media all and (max-width:900px){
@@ -88,3 +93,6 @@ select{
         
     }
 }
+
+
+/* todo add task style end*/

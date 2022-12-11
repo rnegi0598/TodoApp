@@ -1,3 +1,4 @@
+/* display task style start */
 .show-todo{
     
     background-color:var(--add-bg) ;
@@ -112,3 +113,4 @@ input[type="checkbox"]{
 }
 
 
+/* display task style end */
