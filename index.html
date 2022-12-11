@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/sidebar-style.css">
     <link rel="stylesheet" href="./styles/main-style.css">
     <link rel="stylesheet" href="./styles/task-add-style.css">
-    <link rel="stylesheet" href="./styles/task-show-style.css">
+    <link rel="stylesheet" href="./styles/task-display-style.css">
     <script src="./scripts/app.js" defer></script>
     <script src="./scripts/sidebar.js" defer></script>
 </head>
@@ -126,8 +126,10 @@
 
         </aside>
         <!-- sidebar ends -->
+
         <!-- main  -->
         <main>
+
             <!-- welcome part starts -->
             <div class="main-title">
                 <h1>Welcome Back, <span><input class="user-name" type="text" placeholder="Name here..." ></span></h1>
@@ -135,31 +137,45 @@
                 Let's get started!"</div>
             </div>
             <!-- welcome part ends -->
+
             <!-- todo task add starts -->
             <div class="todo-add">
                 <div class="input-div">
-                    <label for="task-name">Enter Task </label>
-                    <input id="task-name" class="task-name" type="text" placeholder=" e.g buy milk from store ...">
-                    <br>
-                    <br>
-                    <label for="task-date">Due Date </label>
-                    <input id="task-date" class="task-date" type="date">
-                    <label for="task-categories">Category </label>
-                    <select name="task-category" class="task-category" id="task-category">
-                        <option value="Personal">Personal</option>
-                        <option value="Work">Work</option>
-                        <option value="Health">Health</option>
-                        <option value="Food">Food</option>
-                    </select>
+        
+                    <div class="row-one">
+                        <label for="task-name">Enter Task </label>
+                        <input id="task-name" class="task-name" type="text" placeholder=" e.g buy milk from store ...">
+                    </div>
+                   
+                    <div class="row-two">
+                        <div>
+                            <label for="task-date">Due Date </label>
+                            <input id="task-date" class="task-date" type="date">
+                        </div>
+                        <div>
+                            <label for="task-categories">Category </label>
+                            <select name="task-category" class="task-category" id="task-category">
+                                <option value="Personal">Personal</option>
+                                <option value="Work">Work</option>
+                                <option value="Health">Health</option>
+                                <option value="Food">Food</option>
+                            </select>
+                        </div>
+                    </div>
+        
                 </div>
+        
                 <div class="submit-div">
                     <button class="add-task-btn" type="submit">
                         <img src="./images/color-btn.svg" alt="">
                         <span>Add Todo</span>
                     </button>
                 </div>
+        
             </div>
+            
             <!-- todo task add ends -->
+
             <!-- displays tasks  -->
             <div class="show-todo">
                 <!-- dummy code starts -->
